@@ -4,38 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flores Frescas</title>
+    <title>Hot Flowers</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/83d40e5cab.js" crossorigin="anonymous"></script>
+    <script src="index.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
-        <div class="Header-container" id="header_container">
-            <div class="letter-container" id="title-container">
-                <div class="logo-o-tittle">
-                    <h1>Flores Frescas</h1>
-                    <h2>night club</h2>  
-                    <p>¡Un lugar para cumplir todas tus fantacias!</p>
-                </div>
+        <!-- Navbar section-->
+            <nav id="topNav">
+                <ul class="menu">
+                    <li class="item"><a href="#">Home</a></li>
+                    <li class="item has-submenu">
+                        <a tabindex="0">Chicas</a>
+                        <ul class="submenu">
+                            <li class="subitem"><a href="#">ESCORTS</a></li>
+                            <li class="subitem"><a href="#">PREPAGOS</a></li>
+                            <li class="subitem"><a href="#">MODELOS Y ARTISTAS</a></li>
+                        </ul>
+                    </li>
+                    <li class="item"><a href="#">Vacaciones</a></li>
+                    <li class="item"><a href="#">Contactenos</a></li>
+                    <a  id="nav-toogle" href="#!"> 
+                        <span></span>
+                    </a>
+                </ul>
+            </nav>
             </div>
         </div>      
     </header>
+    <div class="home"></div>
     <main>
-        <section class="Dinamicas" href="dimanicas">
-            <div class="Dinamicas-Container">
-                <div class="Show-sw-box">
-                    <h1>SUITE SWINGER 24/7</h1>
-                    <img id="swinger" src="./Assest/Show_sw.jpeg" alt="suite swinger">
-                    <p>DISCOTECA<br/>TURCO<br/>JACUZZI SOLO PAREJAS</p>
-                </div>
-                <div class="Chicas-box">
-                    <h1>CHICAS</h1>
+    <section class="Dinamicas" href="dimanicas">
+        <div class="Dinamicas-Container">
+            <div class="Show-sw-box">
+                <h1 class="sw-box-text">ESCORTS</h1>
+                <img id="swinger" src="./Assest/Show_sw.jpeg" alt="suite swinger">
+                <p class="sw-box-subtext">Ideales para fiestas y eventos<br/>Mujeres con clase y presencia<br/>Hermosas y elegantes</p>
+            </div>
+            <div class="Chicas-box">
+                    <h1 class="girls-box-text">PREPAGOS</h1>
                     <img id="chicas" src="./Assest/Show_lesbi.jpeg" width="300" height="225" alt="chicas" id="chicas">
-                    <p>SHOW LESBI-SEXO EN VIVO<br><b>*PARA VER O PARTICIPAR*</b><br>MODELOS Y ACOMPAÑANTES</p>
+                    <p class="girls-box-subtext">Chicas de todo tipo<br><b>Desde 200.000$</b><br>Descomplicadas y ardientes</p>
                 </div>
                 <div class="Strippers-herOnly">
-                    <h1>STRIPPERS</h1>
+                    <h1 class="str-box-text">MODELOS</h1>
                     <img id="strippers" src="./Assest/strippers.jpeg" width="300" alt="strippers">
-                    <p>SOLO PARA ELLLAS<br>SHOWS MASCULINOS<br>MODELOS Y ACOMPAÑANTES</p>
+                    <p class="str-box-subtext">Modelos de protocolo<br>Serias y con porte<br>Sobresale del resto</p>
                 </div>
             </div>
         </section>
