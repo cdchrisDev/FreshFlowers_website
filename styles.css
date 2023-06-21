@@ -11,38 +11,119 @@ body {
     font-size: 16px;
 }
 /* MENU SECTION*/
-nav {
+
+nav{display: block}
+
+#topNav {
     padding: 0 15px;
     background-color: rgb(255, 0, 96);
-    overflow: hidden;
-    height: auto;
     font-size: 25px;
 }
 
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    display: block;
-    text-align: center;
+#topNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
+#topNav > ul > li {
+    display: inline-block;
 }
 
-nav li { 
+#topNav > ul > li { 
     padding: 10px;
     margin: 7px;
     align-items: center;
     transition: 0.3s;
-    list-style-type: none;
+    display: inline-block;
+
 }
+
+ #topNav ul li {
+    position: relative;
+ }
+
+ .header #topNav > ul >li > a {
+    line-height: 100px;
+ }
+
+ #topNav > ul > li > a {
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 600;
+    -webkit-transform: all 0.3s ease-in-out;
+    -ms-transformation: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+ }
+
+ #topNav ul.submenu {
+    position: absolute;
+    left: 0;
+    top: 150%;
+    width: 300px;
+    text-align: left;
+    z-index: 9999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(Opacity=0);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+ }
+
+ #topNav ul.submenu li:first-child {
+    border-top: none;
+ }
+
+ #topNav ul.submenu > li {
+    border-top: 1px solid #ccc;
+ }
+
+ #topNav ul li ul li {
+    margin-left: 0;
+ }
+
+ #topNav ul.submenu > li > a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0 0 20px;
+    line-height: 45px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+ }
+
+ #topNav ul li:hover > ul.submenu {
+    top: 100%;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    visibility: visible;
+    border-radius: 0 25px 25px 25px;
+ }
 
 
 .item:hover {
-    background-color: rgb(255, 0, 176);
+    background-color: rgb(240, 79, 189);
     border-radius: 25px 25px 25px 25px ;
+}
+
+.subitem:hover {
+    background-color: rgb(109, 0, 75);
+    border-radius: 25px 25px 25px 25px ;
+    transition: 0.3s;
 }
 
 .item:active {
@@ -50,47 +131,25 @@ nav li {
     background-color: #ccc;
 }
 
-nav ul li a:not(:only-child):after {
+#topNav ul li a:not(:only-child):after {
     content: ' ▾';
 }
 
-nav ul li ul li {
-    min-width: 190px;
+#itemenu:hover {
+    border-radius: 25px 0 25px 0;
 }
 
-nav ul li ul li a {
-    padding: 20px;
-    line-height: 20px;
-}
-
-.item.button{ padding :9px 5px; }
-.item:not(.button) a:hover, .item a:hover::after {
-    color: #ccc;
-}
-
-#button{
-    display: none;
-}
-
-.submenu {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    box-shadow: 0 3px 12px rgba;
-}
 
 /*RESPONSIVE NAVBAR DESING*/
 @media screen and  (max-width: 768px) {
-    nav li:not(:first-child) {
+    #topNav li:not(:first-child) {
         display: none;
     }
 
     #nav-toogle {
         display: block;
     }
-}
 
-@media screen and (max-width: 768px) {
     nav.responsive {
         position: relative;
     }
@@ -106,6 +165,7 @@ nav ul li ul li a {
         text-align: left;
     }
 }
+
 
 /*BODY*/
 
